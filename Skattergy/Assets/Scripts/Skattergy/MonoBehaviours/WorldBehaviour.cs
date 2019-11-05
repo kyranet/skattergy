@@ -28,10 +28,7 @@ namespace Skattergy.MonoBehaviours
         {
             while (enabled)
             {
-                World.Tick();
-                Debug.Log("Tick!");
-                foreach (var kvp in World.PlayerResourceAmount)
-                    Debug.Log ($"Key = {kvp.Key}, Value = {kvp.Value}");   
+                World.Tick();  
                 yield return new WaitForSeconds(TickSeconds);
             }
         }

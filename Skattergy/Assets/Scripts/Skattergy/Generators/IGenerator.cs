@@ -5,8 +5,8 @@ namespace Skattergy.Generators
     public interface IGenerator : IBuildable, ITickable
     {
         Resource Resource { get; }
-        int ResourceGenerationPerTick { get; }
+        ulong ResourceGenerationPerTick { get; }
         Resource? RequiredResource { get; }
-        int? RequiredResourcePerTick { get; }
+        ulong? RequiredResourcePerTick { get; }
     }
 }
