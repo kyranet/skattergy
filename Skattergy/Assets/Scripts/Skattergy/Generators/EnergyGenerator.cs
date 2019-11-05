@@ -14,19 +14,19 @@ namespace Skattergy.Generators
         
         public void Tick(World context)
         {
-            context.PlayerResourceAmount[Resource] += ResourceGenerationPerTick;
             Debug.Assert(RequiredResource != null, nameof(RequiredResource) + " != null");
             Debug.Assert(RequiredResourcePerTick != null, nameof(RequiredResourcePerTick) + " != null");
-            context.PlayerResourceAmount[(Resource)RequiredResource] -= (int)RequiredResourcePerTick;
-            // man, I really fucking wish we had nullables from C#8. Sad face emoji.
+
+            if (context.PlayerResourceAmount[(Resource) RequiredResource].Remove((ulong) RequiredResourcePerTick))
+                context.PlayerResourceAmount[Resource].Add(ResourceGenerationPerTick);
         }
 
         public Resource Resource => Resource.Energy;
         
         // this would probably be injected via a constructor based on the current position of the building
         // for the resource generation per tick (perhaps for a mine, you put it on a high value spot, TBD)
-        public int ResourceGenerationPerTick => 10;
+        public ulong ResourceGenerationPerTick => 10;
         public Resource? RequiredResource => Resource.Fuel;
-        public int? RequiredResourcePerTick => 8;
+        public ulong? RequiredResourcePerTick => 8;
     }
 }
