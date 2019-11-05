@@ -9,6 +9,7 @@
         <e p="Scripts" t="Include">
           <e p="skattergy" t="Include">
             <e p="Core" t="Include">
+              <e p="Building.cs" t="Include" />
               <e p="IBuildable.cs" t="Include" />
               <e p="ITickable.cs" t="Include" />
               <e p="PlayerResource.cs" t="Include" />
@@ -17,7 +18,8 @@
               <e p="WorldPosition.cs" t="Include" />
             </e>
             <e p="Generators" t="Include">
-              <e p="EnergyGenerator.cs" t="Include" />
+              <e p="AdvancedEnergyGenerator.cs" t="Include" />
+              <e p="BasicEnergyGenerator.cs" t="Include" />
               <e p="IGenerator.cs" t="Include" />
             </e>
             <e p="MonoBehaviours" t="Include">

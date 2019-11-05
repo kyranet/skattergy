@@ -2,7 +2,7 @@
 {
     public interface IBuildable
     {
-        ushort Level { get; }
+        byte Level { get; }
         bool CanBuild { get; }
         bool CanUpgrade { get; }
         WorldPosition Position { get; }
