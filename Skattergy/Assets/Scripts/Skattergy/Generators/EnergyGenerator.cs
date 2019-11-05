@@ -1,18 +1,23 @@
 ﻿using Skattergy.Core;
 using UnityEngine;
+using Debug = System.Diagnostics.Debug;
 
 namespace Skattergy.Generators
 {
     public class EnergyGenerator : IGenerator
     {
-        public bool CanBuild => true; // TODO: probably add some cost logic?
+        public ushort Level => 0;
+        public bool CanBuild => true; // TODO: Add cost logic
+        public bool CanUpgrade => true; // TODO: Add cost logic
 
         public WorldPosition Position { get; } // ignore for now, we'll implement actual positioning later
         
         public void Tick(World context)
         {
             context.PlayerResourceAmount[Resource] += ResourceGenerationPerTick;
-            context.PlayerResourceAmount[(Resource)RequiredResource] -= (int)RequiredResourcePerTick; 
+            Debug.Assert(RequiredResource != null, nameof(RequiredResource) + " != null");
+            Debug.Assert(RequiredResourcePerTick != null, nameof(RequiredResourcePerTick) + " != null");
+            context.PlayerResourceAmount[(Resource)RequiredResource] -= (int)RequiredResourcePerTick;
             // man, I really fucking wish we had nullables from C#8. Sad face emoji.
         }
 
