@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Tyler Davis\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Tyler Davis\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Skattergy.459723461.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Tyler Davis\Desktop\coding\projects\Unity\skattergy\skattergy" t="IncludeRecursive">
+    <e p="C:\Users\antor\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\antor\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Skattergy.637922808.00" t="ExcludeRecursive" />
+    <e p="D:\Repositories\NyProject\skattergy\skattergy" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
@@ -18,6 +18,9 @@
             <e p="Generators" t="Include">
               <e p="EnergyGenerator.cs" t="Include" />
               <e p="IGenerator.cs" t="Include" />
+            </e>
+            <e p="MonoBehaviours" t="Include">
+              <e p="WorldBehaviour.cs" t="Include" />
             </e>
           </e>
         </e>
