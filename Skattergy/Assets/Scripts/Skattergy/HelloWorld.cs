@@ -6,7 +6,7 @@ namespace Skattergy
     {
         public void Start()
         {
-            Debug.Log("Hello world!");   
+            Debug.Log("Hello World");
         }
     }
 }
