@@ -1,12 +1,12 @@
 ﻿using Skattergy.Core;
-using UnityEngine;
 using Debug = System.Diagnostics.Debug;
 
 namespace Skattergy.Generators
 {
-    public class EnergyGenerator : IGenerator
+    public class AdvancedEnergyGenerator : IGenerator
     {
-        public ushort Level => 0;
+        public Building Kind => Building.AdvancedEnergyGenerator;
+        public byte Level => 0;
         public bool CanBuild => true; // TODO: Add cost logic
         public bool CanUpgrade => true; // TODO: Add cost logic
 

@@ -5,11 +5,17 @@ namespace Skattergy.Core
 {
     public class World
     {
+        public Dictionary<Building, IGenerator> PlayerBuildables { get; }
         public Dictionary<Resource, PlayerResource> PlayerResourceAmount { get; }
         private IEnumerable<ITickable> Tickables { get; }
         
         public World()
         {
+            PlayerBuildables = new Dictionary<Building, IGenerator>
+            {
+                [Building.BasicEnergyGenerator] = new BasicEnergyGenerator(),
+                [Building.AdvancedEnergyGenerator] = new AdvancedEnergyGenerator()
+            };
             PlayerResourceAmount = new Dictionary<Resource, PlayerResource>
             {
                 [Resource.Energy] = new PlayerResource(Resource.Energy, 0UL),
@@ -19,7 +25,8 @@ namespace Skattergy.Core
             };
             Tickables = new List<ITickable>
             {
-                new EnergyGenerator()
+                PlayerBuildables[Building.BasicEnergyGenerator],
+                PlayerBuildables[Building.AdvancedEnergyGenerator]
             };
         }
         
