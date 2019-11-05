@@ -6,11 +6,9 @@
     <e p="C:\Users\Tyler Davis\Desktop\coding\projects\Unity\skattergy\skattergy" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Scenes" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="skattergy" t="Include">
-              <e p="HelloWorld.cs" t="Include" />
-            </e>
+        <e p="Scripts" t="Include">
+          <e p="skattergy" t="Include">
+            <e p="HelloWorld.cs" t="Include" />
           </e>
         </e>
       </e>
