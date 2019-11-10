@@ -46,14 +46,15 @@ namespace Skattergy.Core
 
             var display = view.GetComponent<TextMeshProUGUI>();
             
-            display.transform.SetParent(context.transform, false); // god knows what this is, thanks unity
-
             // amount of children in the scrollview -- needed for knowing how much to offset vertically
             var amount = context.transform.childCount;
+            
+            display.transform.SetParent(context.transform, false); // god knows what this is, thanks unity
 
             var rect = display.rectTransform;
             // offset
-            rect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, display.rectTransform.rect.height * amount, 0);
+            rect.SetInsetAndSizeFromParentEdge(RectTransform.Edge.Top, 
+                (amount * display.rectTransform.rect.height) + display.rectTransform.rect.height / 2, 0);
             
             _display = display;
             
