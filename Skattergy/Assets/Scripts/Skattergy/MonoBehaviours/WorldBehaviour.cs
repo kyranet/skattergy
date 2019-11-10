@@ -17,8 +17,6 @@ namespace Skattergy.MonoBehaviours
 
         private void Awake()
         {
-            Debug.Log("GUI");
-            Debug.Log(_gui);
             _world = new World {View = _gui};
             _world.CreateViewModel();
         }
