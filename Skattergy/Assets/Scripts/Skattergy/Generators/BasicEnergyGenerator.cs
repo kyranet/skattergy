@@ -13,7 +13,7 @@ namespace Skattergy.Generators
         
         public void Tick(World context)
         {
-            context.PlayerResourceAmount[Resource].Add(ResourceGenerationPerTick);
+            context.PlayerResources[Resource].Add(ResourceGenerationPerTick);
         }
 
         public Resource Resource => Resource.Energy;

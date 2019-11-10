@@ -17,8 +17,8 @@ namespace Skattergy.Generators
             Debug.Assert(RequiredResource != null, nameof(RequiredResource) + " != null");
             Debug.Assert(RequiredResourcePerTick != null, nameof(RequiredResourcePerTick) + " != null");
 
-            if (context.PlayerResourceAmount[(Resource) RequiredResource].Remove((ulong) RequiredResourcePerTick))
-                context.PlayerResourceAmount[Resource].Add(ResourceGenerationPerTick);
+            if (context.PlayerResources[(Resource) RequiredResource].Remove((ulong) RequiredResourcePerTick))
+                context.PlayerResources[Resource].Add(ResourceGenerationPerTick);
         }
 
         public Resource Resource => Resource.Energy;
